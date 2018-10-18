@@ -12,7 +12,7 @@ RSpec.describe Fibonnaci, type: Class do
         end
 
         it "should print out 10 fib numbers in sequence" do
-            fibonacci_iterative.print_fib
+            expect(fibonacci_iterative.print_fib).to eq [ 0, 1, 2, 3, 5, 8, 13, 21, 34, 55]
         end
 
     end

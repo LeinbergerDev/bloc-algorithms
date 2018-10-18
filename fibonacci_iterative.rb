@@ -6,27 +6,30 @@ class Fibonnaci
             self.numbers = Array.new
         end
 
-        # if num = 0 then add 0 to the array and return 0
+        # if num == 0 the fibonacci number is 0
         if num == 0
-            self.numbers << 0
+            self.numbers.push(0)
             return 0
         else
+            # if num is not zero we need the last two numbers together to get
+            # the next number in the squence
             n1 = self.numbers.last
-            puts(n1)
-            fib_num = n1 + num
-            puts(fib_num)
-            self.numbers << fib_num
-            puts(numbers)
-            return fib_num
+            self.numbers.push(num)
+            return n1 + num
         end
     end
 
     def print_fib
+        array = Array.new
         my_num = fib(0)
+        array.push(my_num)
         my_num = fib(1)
+        array.push(my_num)
         8.times do
             my_num = fib(my_num)
+            array.push(my_num)
         end
+        return array
     end
     
 end

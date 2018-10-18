@@ -1,0 +1,34 @@
+Algorithm #1 : Dress my 6 year old for school
+
+1: Show Artie the clothes his mother laid out for him the night before.
+2: Pause the netflix and tell Artie to get dressed for school.
+3: return 5 minutes later and instruct Artie to remove his pants from his head
+    and put them on properly
+4: give up on Artie dressing himself and help him put his pants and shirt on.
+5: hand Artie a pair of socks and instruct him to put them on.
+6: return 5 minutes later and put Artie's shirt back on and make him put his socks on.
+7: put Artie's shoes on and drag him out the door for school.
+
+Algorithm #2 : Driving to work.
+
+1: Open the car door and set in the drivers seat.
+2: Put on the seat bealt.
+3: Put the key in the ignition.
+4: Put your foot on the break and turn the key to start the engine.
+5: Put your foot on the break and move the gear shifter into reverse.
+6: back out of my driveway into the street.
+7: Put foot on break to stop. 
+8: Brefore removing your foot from the break put the gear shifter into drive.
+9: Drive down the street to the first stop sign.
+10: Use your left turn signal to turn left.
+11: drive to the stop light and enter the right turn lane.
+12: Use your signal and turn right.
+13: Travel down the street until you reach the parking lot entrance.
+14: Park the car in your assigned spot.
+
+Algorithm #3 : Calculating a tip
+1: receive the bill from the waiter or waitress.
+2: find the total of the meal.
+3: multiply the total of the meal by 20%
+4: round up the nearest dollar and leave that value in cash on the table.
+
