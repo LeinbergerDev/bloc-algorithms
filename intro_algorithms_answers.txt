@@ -1,34 +1,81 @@
 Algorithm #1 : Dress my 6 year old for school
 
-1: Show Artie the clothes his mother laid out for him the night before.
-2: Pause the netflix and tell Artie to get dressed for school.
-3: return 5 minutes later and instruct Artie to remove his pants from his head
-    and put them on properly
-4: give up on Artie dressing himself and help him put his pants and shirt on.
-5: hand Artie a pair of socks and instruct him to put them on.
-6: return 5 minutes later and put Artie's shirt back on and make him put his socks on.
-7: put Artie's shoes on and drag him out the door for school.
+if artie_is_dressed == false
+    while not shirt_is_on
+        task("Put on shirt")
+        if task.complete
+            shirt_is_on = true
+        else
+            task.prompt_again
+        end
+    end
+    while pants_on == false
+        task("Put on Pants")
+        if task.complete
+            pants_on = true
+        else
+            task.prompt_again
+        end
+    end
+    while socks_shoes_on == false
+        task("Put on socks and shoes")
+        if task.complete
+            pants_on = true
+        else
+            task.prompt_again
+        end
+    end
+    artie_is_dressed = true
+end
+
 
 Algorithm #2 : Driving to work.
 
-1: Open the car door and set in the drivers seat.
-2: Put on the seat bealt.
-3: Put the key in the ignition.
-4: Put your foot on the break and turn the key to start the engine.
-5: Put your foot on the break and move the gear shifter into reverse.
-6: back out of my driveway into the street.
-7: Put foot on break to stop. 
-8: Brefore removing your foot from the break put the gear shifter into drive.
-9: Drive down the street to the first stop sign.
-10: Use your left turn signal to turn left.
-11: drive to the stop light and enter the right turn lane.
-12: Use your signal and turn right.
-13: Travel down the street until you reach the parking lot entrance.
-14: Park the car in your assigned spot.
+while driving_to_work == true
+    if door closed
+        open door
+    end
+    sit in drivers seat
+    put on seat belt
+    start engine
+    put car in driver
+    pull out of the driveway
+    turn right
+    continue to first intersection
+    enter left turn lane
+    if light is green && lane is clear
+        turn left
+    else
+        while light is red || lane is not clear
+            stop vehicle
+            if light is red
+                wait for light to turn green
+            else if lane is not clear
+                wait for lane to clear
+            end
+        end
+        turn left
+    end
+    continue 1.5 miles 
+    if lane is clear
+        turn left into parking lot
+    else 
+        while line is not clear
+            wait for lane to clear
+        end
+        turn left into parking lot
+    end
+
+    park in assigned parking spot
+end
+
+
 
 Algorithm #3 : Calculating a tip
-1: receive the bill from the waiter or waitress.
-2: find the total of the meal.
-3: multiply the total of the meal by 20%
-4: round up the nearest dollar and leave that value in cash on the table.
+if bill_recieved == true
+    total = bill.total
+    tip = total * 0.20
+    return tip.round_up
+end
+
 
