@@ -26,3 +26,18 @@ how many iterations would it take to find the value G using binary search?
    12   55 + 89 = fib(144)
    
 
+Given an unsorted collection of a million items, which algorithm would you choose between linear search and binary search? 
+Would you use an iterative or recursive solution? Explain your reasoning.
+Given it's an unsorted collection I'd use linear seach algorithm.  Binary search requires that the array be sorted 
+in order to be used.  I would use iterative for my solution.  Since I am using a linear algorithm a while loop with such 
+as:
+while array[i] != searched_for_value
+  i = i + 1
+end
+could be used.
+
+Given a sorted collection of a million items, which algorithm would you choose between linear search and binary search? 
+Would you use an iterative or recursive solution? Explain your reasoning.
+Given a sorted collection I would binary search.  Since the array is sorted a binary search will in most instances reduce
+the number of times the alorithm has to be called to find the value.  I'd use a recursive approach in this instance calling the
+find method with the newly calculated low and high index values.
