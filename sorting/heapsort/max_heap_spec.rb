@@ -44,54 +44,62 @@ RSpec.describe MaxHeap, type: Class do
        end
 
        it "it insert the node in the left spot" do
-        maxheap.insert(d)
+        maxheap.insert(maxheap.root, d)
         expect(maxheap.root.left.letter).to eq("d")
       end
 
       it "it insert the node in the right spot" do
-        maxheap.insert(d)
-        maxheap.insert(e)
+        maxheap.insert(maxheap.root, d)
+        maxheap.insert(maxheap.root, e)
+        expect(maxheap.root.letter).to eq("j")
+        expect(maxheap.root.left.letter).to eq("e")
         expect(maxheap.root.right.letter).to eq("d")
       end
 
       it "it insert the node in the right spot" do
-        maxheap.insert(d)
-        maxheap.insert(e)
-        maxheap.insert(f)
-        expect(maxheap.root.letter).to eq("f")
+        maxheap.insert(maxheap.root, d)
+        maxheap.insert(maxheap.root, e)
+        maxheap.insert(maxheap.root, a)
+        expect(maxheap.root.letter).to eq("j")
+        expect(maxheap.root.left.letter).to eq("e")
         expect(maxheap.root.right.letter).to eq("d")
+        expect(maxheap.root.left.left.letter).to eq("a")
       end
 
       it "it updates the head of the heap " do 
-        maxheap.insert(d)
-        maxheap.insert(z)
+        maxheap.insert(maxheap.root, d)
+        maxheap.insert(maxheap.root, z)
         expect(maxheap.root.letter).to eq("z")
       end
 
-      # it "should delete the d node" do
-      #   maxheap.insert(maxheap.root, d)
-      #   maxheap.insert(maxheap.root, e)
-      #   maxheap.insert(maxheap.root, z)
-      #   maxheap.delete(maxheap.root, "d")
-      #   expect(maxheap.find(maxheap.root, "d")).to be_nil
-      # end
+      it "should delete the d node" do
+        maxheap.insert(maxheap.root, d)
+        maxheap.insert(maxheap.root, e)
+        maxheap.insert(maxheap.root, z)
+        maxheap.delete(maxheap.root, "d")
+        expect(maxheap.find(maxheap.root, "d")).to be_nil
+      end
 
-      # it "should find the d node" do
-      #   maxheap.insert(maxheap.root, d)
-      #   maxheap.insert(maxheap.root, e)
-      #   maxheap.insert(maxheap.root, z)
-      #   expect(maxheap.find(maxheap.root, "d").letter).to eq("d")
-      # end
+      it "should find the d node" do
+        maxheap.insert(maxheap.root, d)
+        maxheap.insert(maxheap.root, e)
+        maxheap.insert(maxheap.root, z)
+        expect(maxheap.find(maxheap.root, "d").letter).to eq("d")
+      end
 
-      # it "should print out the heap" do
-      #   maxheap.insert(maxheap.root, z)
-      #   maxheap.insert(maxheap.root, g)
-      #   maxheap.insert(maxheap.root, f)
-      #   maxheap.insert(maxheap.root, e)
-      #   maxheap.insert(maxheap.root, d)
-      #   maxheap.insert(maxheap.root, b)
-      #   maxheap.insert(maxheap.root, a)
-      #   maxheap.printf
-      # end
+      it "should print out the heap" do
+        maxheap.insert(maxheap.root, y)
+        maxheap.insert(maxheap.root, d)
+        maxheap.insert(maxheap.root, w)
+        maxheap.insert(maxheap.root, f)
+        maxheap.insert(maxheap.root, z)
+        maxheap.insert(maxheap.root, x)
+        maxheap.insert(maxheap.root, b)
+        expect(maxheap.root.letter).to eq("z")
+        expect(maxheap.root.left.letter).to eq("y")
+        expect(maxheap.root.right.letter).to eq("x")
+        expect(maxheap.root.left.left.letter).to eq("w")
+        maxheap.printf
+      end
     end
 end

@@ -12,12 +12,16 @@ class HeapSort
 
   def create_heap
     return if @array == nil
-    @maxheap = MaxHeap.new(@array[0])
+    @maxheap = MaxHeap.new(Node.new(@array[0].index, @array[0].letter))
     i = 1
     for i in i..@array.length-1
-      puts(array[i].letter)
-      @maxheap.insert(@maxheap.root, @array[i])
-    end
+      @maxheap.insert(@maxheap.root, Node.new(@array[i].index, @array[i].letter))
+    end 
+  end
+
+  def sortArray
+    @array = @maxheap.export_array
+    return @array
   end
 
 end
