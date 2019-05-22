@@ -1,0 +1,2 @@
+1) This code will run in constant time so the big-O is O(1)
+2) This code runs in linear time.  The larger the dataset the more time the code will run for.  The big-o is O(n).
