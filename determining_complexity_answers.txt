@@ -1,2 +1,7 @@
 1) This code will run in constant time so the big-O is O(1)
 2) This code runs in linear time.  The larger the dataset the more time the code will run for.  The big-o is O(n).
+3) The code runs in Logarithmic time.  The number of interations that it take to find the value you are searching
+for increases at a much slower rate than the increase of items in the collection.  The big-o is O(log n).
+4) This algorithm runs in constant time since it will only ever execute once.  The big-O is O(1).
+5) Since this algorithm counts back from n to zero it runs in linear time.  The big-o is O(n).
+6) This code runs in Loglinear time.  The big-o is O(n log n).
